@@ -16,8 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
-    border: none;
     text-decoration: none;
 }
 
@@ -47,6 +45,7 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
@@ -56,10 +55,17 @@ body{
     color: var(--white);
     border-radius: 5px;
     text-transform: capitalize;
+    border: none;
 }
-.btn:hover,.delete-btn,.option-btn{
-background-color: var(--black);
+.btn:hover,.delete-btn:hover,.option-btn:hover{
+    background-color: var(--black);
 }
+
+.btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible{
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+}
+
 .btn{
     background-color: var(--blue);
     margin-top: 10px;
@@ -92,9 +98,26 @@ background-color: var(--red);
 
 .form-container form h3{
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     color: var(--black);
+}
+
+.input-field{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-field label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.input-field .required{
+    color: var(--red);
 }
 
 .form-container form .box{
@@ -102,15 +125,25 @@ background-color: var(--red);
     border: var(--border);
     padding: 12px 14px;
     font-size: 18px;
-    margin:10px 0;
+    border-radius: 5px;
+}
+
+.form-container form .box:focus{
+    border-color: var(--blue);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
 }
 
 .form-container form p{
 margin-top: 20px;
-font-size: 20px;
+font-size: 18px;
 color: var(--black);
 }
 
+.form-container form p a{
+    color: var(--blue);
+}
+
 .form-container form p a:hover{
-text-decoration: underline;
+    text-decoration: underline;
 }
