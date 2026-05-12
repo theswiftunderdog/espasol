@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -37,6 +36,28 @@
 body{
     background-color: var(--light-bg);
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.box:focus-visible,
+.btn:focus-visible,
+.delete-btn:focus-visible,
+.option-btn:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+}
+
 .message{
     position: sticky;
     top:0;
