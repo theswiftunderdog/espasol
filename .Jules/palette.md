@@ -1,0 +1,3 @@
+## 2026-05-19 - Accessible Form Controls and Focus States
+**Learning:** Global `outline: none` rules significantly degrade keyboard accessibility. Providing distinct focus states (using `:focus-visible`) that match the brand colors (blue for inputs, orange for buttons) improves both accessibility and visual polish. Additionally, using `.sr-only` labels ensures form fields are accessible to screen readers without altering the visual design when placeholders are used as visual cues.
+**Action:** Always check for `outline: none` and replace it with meaningful `:focus-visible` styles. Use `.sr-only` for semantic labeling of icon-only or placeholder-only inputs.
