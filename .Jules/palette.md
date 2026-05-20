@@ -1,0 +1,3 @@
+## 2026-05-20 - [Persona Boundaries: UX vs Backend]
+**Learning:** Even if the underlying backend code is broken, a UX-focused agent (Palette) should prioritize accessibility and interface improvements without overstepping into backend logic fixes or environment setup (like `config.php`) that aren't strictly necessary for the UI enhancement. Fixing backend bugs can lead to introducing security risks (hardcoded credentials) or repository clutter (log files).
+**Action:** Focus strictly on semantic HTML, ARIA labels, and focus visibility. Use temporary, uncommitted local changes for backend/environment fixes if they are needed purely for frontend verification, but ensure they are cleaned up before final submission.
