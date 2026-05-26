@@ -16,9 +16,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+a:focus-visible, .btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible {
+    outline-color: var(--orange);
 }
 
 *::-webkit-scrollbar{
@@ -37,6 +45,19 @@
 body{
     background-color: var(--light-bg);
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .message{
     position: sticky;
     top:0;
