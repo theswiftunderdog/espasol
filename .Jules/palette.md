@@ -1,0 +1,3 @@
+## 2026-05-28 - [Accessibility & Micro-UX in Legacy PHP]
+**Learning:** Legacy PHP applications often lack semantic structure and keyboard accessibility. Introducing a `.sr-only` utility class allows for adding descriptive `<label>` elements without disrupting existing tight visual layouts. Combining this with `:focus-visible` and high-contrast outlines ensures the app is usable for both screen reader and keyboard-only users.
+**Action:** Always check for `outline: none` in global styles and replace it with deliberate `:focus-visible` states. Use `.sr-only` for form labels when placeholders are used as visual labels.
