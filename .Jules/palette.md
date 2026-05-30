@@ -1,0 +1,3 @@
+## 2026-05-30 - Accessible Form Focus and Labels
+**Learning:** Global `outline: none` is a major accessibility blocker for keyboard users. Combining `:focus-visible` with a high-contrast `outline-offset` provides a clear visual indicator without affecting the layout for mouse users. Additionally, using `sr-only` labels ensures screen reader accessibility while maintaining the intended visual design when placeholders are used as visual labels.
+**Action:** Always check for `outline: none` in base styles and replace with meaningful `:focus-visible` states. Use `sr-only` utility for mandatory form labels that should not be visually present.
