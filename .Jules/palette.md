@@ -1,0 +1,3 @@
+## 2024-05-31 - Restoring focus indicators and adding accessible labels
+**Learning:** The application had a global `outline: none` reset which is an accessibility anti-pattern. Restoring it and using `:focus-visible` with `outline-offset` provides a much better experience for keyboard users without affecting mouse users. Also, using `.sr-only` labels allows for accessibility compliance while preserving the original "placeholder-only" design intent.
+**Action:** Always check for `outline: none` in CSS resets and replace with `:focus-visible` styles. Use `.sr-only` for mandatory labels that are not part of the visual design.
