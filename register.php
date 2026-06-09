@@ -1,5 +1,5 @@
 <?php
-include 'config.php'; 
+include 'config.php';
 if(isset($_POST['submit'])){
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -33,12 +33,16 @@ if(isset($message)){
 }
 
 ?>
-<div class="form-container"> 
+<div class="form-container">
 <form action="" method="post">
-    <input type="text" name="name" required placeholder="enter username" class="box">
-    <input type="email" name="email" required placeholder="enter email" class="box">
-    <input type="password" name="password" required placeholder="enter password" class="box">
-    <input type="password" name="cpassword" required placeholder="confirm password" class="box">
+    <label for="name" class="sr-only">username</label>
+    <input type="text" id="name" name="name" required placeholder="enter username" class="box">
+    <label for="email" class="sr-only">email</label>
+    <input type="email" id="email" name="email" required placeholder="enter email" class="box">
+    <label for="password" class="sr-only">password</label>
+    <input type="password" id="password" name="password" required placeholder="enter password" class="box">
+    <label for="cpassword" class="sr-only">confirm password</label>
+    <input type="password" id="cpassword" name="cpassword" required placeholder="confirm password" class="box">
     <input type="submit" name="submit" class="btn" value="register now">
     <p>already have an account? <a href="login.php">login now</a></p>
 </form>
