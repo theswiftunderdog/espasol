@@ -1,0 +1,3 @@
+## 2024-06-10 - Restoring Keyboard Focus & Accessible Labels
+**Learning:** Global `outline: none` rules are a common accessibility blocker in legacy CSS. Restoring them with `:focus-visible` and `outline-offset` provides a polished experience for keyboard users without affecting visual aesthetics for mouse users. Using `.sr-only` labels allows for better screen reader support when design constraints prioritize placeholders for visual simplicity.
+**Action:** Always check for `outline: none` in the base stylesheet and replace it with semantic `:focus-visible` indicators using the application's theme colors. Combine this with `.sr-only` labels for form inputs to ensure WCAG compliance while maintaining the intended visual design.
