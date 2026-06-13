@@ -1,0 +1,3 @@
+## 2026-06-13 - Focus Visibility and Form Accessibility
+**Learning:** In projects where `outline: none` is applied globally, keyboard accessibility is completely broken. Restoring focus indicators and using `:focus-visible` with `outline-offset` provides a clear, accessible, and non-disruptive way to highlight interactive elements. Additionally, using the `.sr-only` pattern for labels allows for a modern, placeholder-driven UI while maintaining screen reader compatibility.
+**Action:** Always check for global `outline: none` rules and replace them with focused, visible indicators. Use `.sr-only` labels for all form inputs to ensure they are accessible even if they have placeholders.
