@@ -16,9 +16,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 *::-webkit-scrollbar{
@@ -56,9 +67,15 @@ body{
     color: var(--white);
     border-radius: 5px;
     text-transform: capitalize;
+    transition: background-color .2s linear;
 }
-.btn:hover,.delete-btn,.option-btn{
-background-color: var(--black);
+.btn:hover,.delete-btn:hover,.option-btn:hover{
+    background-color: var(--black);
+}
+
+.btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 .btn{
     background-color: var(--blue);
@@ -103,6 +120,11 @@ background-color: var(--red);
     padding: 12px 14px;
     font-size: 18px;
     margin:10px 0;
+}
+
+.form-container form .box:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
 }
 
 .form-container form p{
