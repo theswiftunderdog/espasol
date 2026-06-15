@@ -16,9 +16,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 
 *::-webkit-scrollbar{
@@ -63,6 +67,7 @@ background-color: var(--black);
 .btn{
     background-color: var(--blue);
     margin-top: 10px;
+    transition: background-color .2s linear;
 }
 
 .delete-btn{
@@ -113,4 +118,16 @@ color: var(--black);
 
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
