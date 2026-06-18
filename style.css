@@ -37,6 +37,19 @@
 body{
     background-color: var(--light-bg);
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .message{
     position: sticky;
     top:0;
@@ -56,13 +69,19 @@ body{
     color: var(--white);
     border-radius: 5px;
     text-transform: capitalize;
+    transition: background-color .2s linear;
 }
-.btn:hover,.delete-btn,.option-btn{
+.btn:hover,.delete-btn:hover,.option-btn:hover{
 background-color: var(--black);
 }
 .btn{
     background-color: var(--blue);
     margin-top: 10px;
+}
+
+.btn:focus-visible{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
 }
 
 .delete-btn{
@@ -105,12 +124,26 @@ background-color: var(--red);
     margin:10px 0;
 }
 
+.form-container form .box:focus-visible{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
 .form-container form p{
 margin-top: 20px;
 font-size: 20px;
 color: var(--black);
 }
 
+.form-container form p a{
+    color: var(--blue);
+}
+
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+.form-container form p a:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
