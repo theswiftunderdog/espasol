@@ -1,0 +1,3 @@
+## 2026-06-20 - [A11y: Restoring focus visibility]
+**Learning:** The global `outline: none` on `*` in `style.css` is a significant accessibility barrier that prevents keyboard users from knowing which element is focused. Replacing it with tailored `:focus-visible` styles using the application's existing color palette (e.g., `--blue` for inputs and `--orange` for buttons) restores accessibility while maintaining the design's aesthetic.
+**Action:** Always check for and remove global `outline: none` rules, replacing them with `:focus-visible` indicators that provide high contrast against the background.
