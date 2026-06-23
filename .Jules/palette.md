@@ -1,0 +1,3 @@
+## 2026-06-23 - Restoring Focus Visibility and Semantic Labeling
+**Learning:** Removing global `outline: none` is crucial for keyboard accessibility. Many legacy projects disable outlines for aesthetic reasons, which breaks navigation for users who rely on the keyboard. Additionally, using placeholders as the only way to identify inputs is an accessibility anti-pattern.
+**Action:** Always audit for `outline: none` and replace it with `:focus-visible` using a high-contrast color from the design system. Ensure all inputs have semantic `<label>` elements, using a `.sr-only` utility if they need to be visually hidden.
