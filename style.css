@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -37,6 +36,11 @@
 body{
     background-color: var(--light-bg);
 }
+
+.sr-only{
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+}
 .message{
     position: sticky;
     top:0;
@@ -48,6 +52,10 @@ body{
     z-index: 1000;
     box-shadow: var(--box-shadow);
 }
+.btn,.delete-btn,.option-btn, .box, a{
+    transition: .2s linear;
+}
+
 .btn,.delete-btn,.option-btn{
     display: inline-block;
     padding: 10px 30px;
@@ -103,6 +111,16 @@ background-color: var(--red);
     padding: 12px 14px;
     font-size: 18px;
     margin:10px 0;
+}
+
+.box:focus-visible{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible, .option-btn:focus-visible, a:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 
 .form-container form p{
