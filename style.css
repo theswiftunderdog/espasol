@@ -21,6 +21,18 @@
     text-decoration: none;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 *::-webkit-scrollbar{
     width: 10px;
     height: 5px;
@@ -37,6 +49,7 @@
 body{
     background-color: var(--light-bg);
 }
+
 .message{
     position: sticky;
     top:0;
@@ -47,7 +60,13 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
 }
+
+.message:hover {
+    background-color: var(--light-bg);
+}
+
 .btn,.delete-btn,.option-btn{
     display: inline-block;
     padding: 10px 30px;
@@ -56,13 +75,21 @@ body{
     color: var(--white);
     border-radius: 5px;
     text-transform: capitalize;
+    transition: .2s linear;
 }
-.btn:hover,.delete-btn,.option-btn{
-background-color: var(--black);
+
+.btn:hover,.delete-btn:hover,.option-btn:hover{
+    background-color: var(--black);
 }
+
 .btn{
     background-color: var(--blue);
     margin-top: 10px;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 
 .delete-btn{
@@ -103,6 +130,12 @@ background-color: var(--red);
     padding: 12px 14px;
     font-size: 18px;
     margin:10px 0;
+    transition: .2s linear;
+}
+
+.form-container form .box:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
 }
 
 .form-container form p{
@@ -111,6 +144,16 @@ font-size: 20px;
 color: var(--black);
 }
 
+.form-container form p a {
+    color: var(--blue);
+    transition: .2s linear;
+}
+
 .form-container form p a:hover{
-text-decoration: underline;
+    text-decoration: underline;
+}
+
+.form-container form p a:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
