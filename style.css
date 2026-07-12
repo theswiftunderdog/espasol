@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -57,8 +56,31 @@ body{
     border-radius: 5px;
     text-transform: capitalize;
 }
-.btn:hover,.delete-btn,.option-btn{
+.btn:hover,.delete-btn:hover,.option-btn:hover{
 background-color: var(--black);
+}
+
+.btn:focus-visible,
+.delete-btn:focus-visible,
+.option-btn:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+.form-container form .box:focus-visible{
+    outline: 2px solid var(--blue);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 .btn{
     background-color: var(--blue);
