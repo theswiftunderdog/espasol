@@ -1,0 +1,3 @@
+## 2024-07-16 - Focus Indicators and Form Accessibility
+**Learning:** Legacy projects often use global `outline: none` which breaks keyboard navigation. Replacing this with high-contrast `:focus-visible` styles using existing design tokens (`--blue` and `--orange`) restores accessibility without compromising the visual design. Semantic headings and visually hidden labels (`.sr-only`) are essential for screen reader support in minimalistic forms.
+**Action:** Always audit for `outline: none` and replace with branded `:focus-visible` indicators. Use `.sr-only` for labels in designs that rely on placeholders for visual simplicity.
