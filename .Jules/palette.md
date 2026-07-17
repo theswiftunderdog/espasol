@@ -1,0 +1,3 @@
+## 2026-07-17 - Keyboard Focus-Visible Verification Pattern
+**Learning:** Destructive global `outline: none;` resets completely disable keyboard focus accessibility. When implementing `:focus-visible` as a branded enhancement, standard Playwright click or focus actions in automated tests fail to trigger the `:focus-visible` state in Chromium. Only simulating real keyboard navigation (via Tab keypresses) triggers the focus ring correctly.
+**Action:** Always verify focus accessibility by simulating explicit `Tab` keyboard presses in verification scripts, rather than element-based `.focus()` triggers.
