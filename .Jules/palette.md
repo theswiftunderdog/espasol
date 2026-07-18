@@ -1,0 +1,3 @@
+## 2026-07-18 - Restoring Keyboard Accessibility through Focus-Visible Outlines
+**Learning:** Replaced legacy global `outline: none` rule with high-contrast, cohesive `:focus-visible` outlines using existing brand colors (`--blue` for inputs and `--orange` for action buttons) with a 2px offset. This ensures standard keyboard accessibility without visually impacting mouse/touch interactions.
+**Action:** Always audit stylesheets for restrictive global resets like `outline: none` and replace them with high-contrast custom `:focus-visible` indicators that blend seamlessly into the existing design tokens.
