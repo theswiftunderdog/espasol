@@ -1,0 +1,3 @@
+## 2026-07-19 - Focus Visibility Optimization via CSS Custom Variables
+**Learning:** This design system previously used a universal `outline: none;` rule which fully broke keyboard accessibility. Restoring focus outlines using existing custom properties (`--blue` for `.box` inputs, `--orange` for interactive `.btn` and `a` selectors) provides a highly aesthetic, high-contrast, accessible visual focus indicator without requiring new design tokens.
+**Action:** When working on similar minimal design systems, audit the universal selectors for `outline: none;` and implement branded `:focus-visible` rules combined with targeted transition rules (`.box, .btn, a { transition: 0.2s linear; }`) instead of universal transitions to maintain style cohesion and performance.
