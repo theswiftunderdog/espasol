@@ -1,0 +1,3 @@
+## 2026-07-21 - Restoring Keyboard Focus Visibility and Semantic Markup
+**Learning:** Legacy universal stylesheets often suppress outline focus indicators globally via `outline: none`, creating complete keyboard navigation barriers. Replacing these rules with purposefully branded `:focus-visible` styles (with offset) paired with `.sr-only` accessible labels restores keyboard compliance and screen-reader usability without altering the visual design of the product.
+**Action:** Always audit stylesheets for `outline: none` and implement `:focus-visible` using existing theme tokens paired with `<label class="sr-only">` elements for inputs that rely entirely on placeholders.
