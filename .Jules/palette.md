@@ -1,0 +1,3 @@
+## 2023-11-23 - Restoring Keyboard Focus Visibility
+**Learning:** Removing global `outline: none` rules and replacing them with purposefully branded `:focus-visible` styles is a primary UX/accessibility enhancement. Setting keyboard focus using dedicated variables like `--blue` and `--orange` keeps the site accessible without sacrificing the aesthetics.
+**Action:** Always search stylesheets for global reset rules like `outline: none` or `outline: 0`, replace them with high-contrast `:focus-visible` rules tailored to interactive components, and ensure focus styles are visible when tab-navigating.
