@@ -1,0 +1,3 @@
+## 2026-07-29 - Restoring Focus Visibility in CSS Reset
+**Learning:** Legacy CSS resets often use global `outline: none` to remove default browser outlines, which completely destroys keyboard accessibility. By replacing global `outline: none` with purposefully designed `:focus-visible` styles using existing design tokens (e.g. `--blue` for form fields and `--orange` for interactive buttons/links), we can restore critical accessibility while keeping the interface pixel-perfect and visually aligned with the design system.
+**Action:** Always audit global CSS files for `outline: none` or `outline: 0` resets and replace them with high-contrast `:focus-visible` styles that preserve and enhance keyboard navigation without affecting mouse users.
