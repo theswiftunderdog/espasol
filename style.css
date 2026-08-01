@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -113,4 +112,44 @@ color: var(--black);
 
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+/* Accessibility and Interactive Micro-UX Enhancements */
+
+/* Targeted transitions instead of universal */
+.btn, .delete-btn, .option-btn, .box, a, .message {
+    transition: background-color 0.2s linear, border-color 0.2s linear, outline-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+/* Focus-visible styling with proper design token colors and offset */
+.box:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible, a:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+/* Dismissible message interactive indicators */
+.message {
+    cursor: pointer;
+}
+
+.message:hover {
+    background-color: var(--light-bg);
+}
+
+/* Screen reader only utility class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
