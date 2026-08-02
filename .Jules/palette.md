@@ -1,0 +1,3 @@
+## 2026-08-02 - Restoring Keyboard Focus Visibility using Branded focus-visible Outlines
+**Learning:** Legacy stylesheets often globally suppress browser outlines (`outline: none`), entirely breaking keyboard navigation and screen-reader form interaction. Rather than completely leaving outlines to default browser styles, integrating purposeful branded `:focus-visible` styles with a 2px offset on interactive form elements provides an exceptional balance between high-contrast keyboard-only visual feedback and a clean mouse-click aesthetic.
+**Action:** When auditing legacy form elements, replace wildcard `outline: none` rules and introduce tailored `:focus-visible` states using the design system's theme variables.
