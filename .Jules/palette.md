@@ -1,0 +1,3 @@
+## 2026-08-03 - Keyboard Focus States and Automated Visual Regression Testing
+**Learning:** Programmatic element focus (e.g., `.focus()`) in modern browser engines (including Chromium under Playwright) does not always trigger `:focus-visible` CSS rules, as the browser cannot infer keyboard-driven intent. Thus, visual indicators for keyboard navigation are omitted in automated screenshots when focusing programmatically.
+**Action:** Always simulate physical tab key presses using sequential `page.keyboard.press('Tab')` when capturing automated screenshots to reliably trigger and verify `:focus-visible` high-contrast outline styling.
