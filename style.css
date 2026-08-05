@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -37,6 +36,33 @@
 body{
     background-color: var(--light-bg);
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.btn, .delete-btn, .option-btn, .box, a {
+    transition: .2s linear;
+}
+
+.box:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible, a:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
 .message{
     position: sticky;
     top:0;
@@ -47,7 +73,14 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: background-color .2s linear;
 }
+
+.message:hover{
+    background-color: var(--light-bg);
+}
+
 .btn,.delete-btn,.option-btn{
     display: inline-block;
     padding: 10px 30px;
