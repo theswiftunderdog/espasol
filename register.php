@@ -35,10 +35,15 @@ if(isset($message)){
 ?>
 <div class="form-container"> 
 <form action="" method="post">
-    <input type="text" name="name" required placeholder="enter username" class="box">
-    <input type="email" name="email" required placeholder="enter email" class="box">
-    <input type="password" name="password" required placeholder="enter password" class="box">
-    <input type="password" name="cpassword" required placeholder="confirm password" class="box">
+    <h3>register now</h3>
+    <label for="name" class="sr-only">Username</label>
+    <input type="text" id="name" name="name" required placeholder="enter username" class="box">
+    <label for="email" class="sr-only">Email address</label>
+    <input type="email" id="email" name="email" required placeholder="enter email" class="box">
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" required placeholder="enter password" class="box">
+    <label for="cpassword" class="sr-only">Confirm password</label>
+    <input type="password" id="cpassword" name="cpassword" required placeholder="confirm password" class="box">
     <input type="submit" name="submit" class="btn" value="register now">
     <p>already have an account? <a href="login.php">login now</a></p>
 </form>
