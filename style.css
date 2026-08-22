@@ -16,9 +16,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+
+.form-container form .box:focus,
+.form-container form .box:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 *::-webkit-scrollbar{
@@ -47,6 +69,10 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.message:hover{
+    background-color: var(--light-bg);
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
