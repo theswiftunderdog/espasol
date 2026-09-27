@@ -16,9 +16,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 *::-webkit-scrollbar{
@@ -59,6 +70,11 @@ body{
 }
 .btn:hover,.delete-btn,.option-btn{
 background-color: var(--black);
+}
+
+.btn:focus-visible,.delete-btn:focus-visible,.option-btn:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 .btn{
     background-color: var(--blue);
@@ -105,6 +121,11 @@ background-color: var(--red);
     margin:10px 0;
 }
 
+.form-container form .box:focus{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
 .form-container form p{
 margin-top: 20px;
 font-size: 20px;
@@ -113,4 +134,10 @@ color: var(--black);
 
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+.form-container form p a:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
