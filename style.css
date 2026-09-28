@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -47,6 +46,13 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.message:hover{
+    background-color: var(--light-bg);
+}
+.btn,.delete-btn,.option-btn,.box,a{
+    transition: .2s linear;
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
@@ -103,6 +109,16 @@ background-color: var(--red);
     padding: 12px 14px;
     font-size: 18px;
     margin:10px 0;
+}
+
+.form-container form .box:focus{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible,.delete-btn:focus-visible,.option-btn:focus-visible,a:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 
 .form-container form p{
