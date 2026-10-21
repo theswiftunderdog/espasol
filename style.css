@@ -37,6 +37,18 @@
 body{
     background-color: var(--light-bg);
 }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .message{
     position: sticky;
     top:0;
@@ -47,6 +59,7 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
@@ -113,4 +126,13 @@ color: var(--black);
 
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+.form-container form .box:focus,
+.btn:focus-visible,
+.delete-btn:focus-visible,
+.option-btn:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
 }
