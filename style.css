@@ -21,6 +21,18 @@
     text-decoration: none;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 *::-webkit-scrollbar{
     width: 10px;
     height: 5px;
@@ -47,6 +59,10 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.message:hover{
+    background-color: var(--light-bg);
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
