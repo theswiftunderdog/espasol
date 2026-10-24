@@ -6,13 +6,13 @@ if(isset($_POST['submit'])){
     $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
     $pass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
 
-    $select = mysqli_query($conn, "SELECT * FROM 'user_form'WHERE email = '$email' AND password = '$pass'") or die('query failed');
-}
-if(mysqli_num_rows($select) > 0){
-    $message[] = 'user already exist!';
-}else{
-mysqli_query($conn, "INSERT INTO 'user_form'(name,email,password)VALUES('$name','$email','$pass')")or die('query failed');
-$message[] = 'registered successfully!';
+    $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+    if(mysqli_num_rows($select) > 0){
+        $message[] = 'user already exist!';
+    }else{
+        mysqli_query($conn, "INSERT INTO `user_form`(name,email,password)VALUES('$name','$email','$pass')")or die('query failed');
+        $message[] = 'registered successfully!';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -35,10 +35,15 @@ if(isset($message)){
 ?>
 <div class="form-container"> 
 <form action="" method="post">
-    <input type="text" name="name" required placeholder="enter username" class="box">
-    <input type="email" name="email" required placeholder="enter email" class="box">
-    <input type="password" name="password" required placeholder="enter password" class="box">
-    <input type="password" name="cpassword" required placeholder="confirm password" class="box">
+    <h3>register now</h3>
+    <label for="name" class="sr-only">Username</label>
+    <input type="text" id="name" name="name" required placeholder="enter username" class="box">
+    <label for="email" class="sr-only">Email</label>
+    <input type="email" id="email" name="email" required placeholder="enter email" class="box">
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" required placeholder="enter password" class="box">
+    <label for="cpassword" class="sr-only">Confirm Password</label>
+    <input type="password" id="cpassword" name="cpassword" required placeholder="confirm password" class="box">
     <input type="submit" name="submit" class="btn" value="register now">
     <p>already have an account? <a href="login.php">login now</a></p>
 </form>
