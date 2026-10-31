@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline:none;
     border: none;
     text-decoration: none;
 }
@@ -47,6 +46,10 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.message:hover{
+    background-color: var(--light-bg);
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
@@ -57,8 +60,12 @@ body{
     border-radius: 5px;
     text-transform: capitalize;
 }
-.btn:hover,.delete-btn,.option-btn{
+.btn:hover,.delete-btn:hover,.option-btn:hover{
 background-color: var(--black);
+}
+.btn:focus-visible,.delete-btn:focus-visible,.option-btn:focus-visible,a:focus-visible{
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
 }
 .btn{
     background-color: var(--blue);
@@ -103,6 +110,10 @@ background-color: var(--red);
     padding: 12px 14px;
     font-size: 18px;
     margin:10px 0;
+}
+.form-container form .box:focus{
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
 }
 
 .form-container form p{
