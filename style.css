@@ -47,6 +47,7 @@ body{
     text-align: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
 }
 .btn,.delete-btn,.option-btn{
     display: inline-block;
@@ -57,8 +58,8 @@ body{
     border-radius: 5px;
     text-transform: capitalize;
 }
-.btn:hover,.delete-btn,.option-btn{
-background-color: var(--black);
+.btn:hover, .delete-btn:hover, .option-btn:hover{
+    background-color: var(--black);
 }
 .btn{
     background-color: var(--blue);
@@ -113,4 +114,13 @@ color: var(--black);
 
 .form-container form p a:hover{
 text-decoration: underline;
+}
+
+.sr-only{
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+}
+.form-container form .box:focus{ outline: 2px solid var(--blue); }
+.btn:focus-visible, .delete-btn:focus-visible, .option-btn:focus-visible, .form-container form p a:focus-visible{
+    outline: 2px solid var(--orange); outline-offset: 2px;
 }
