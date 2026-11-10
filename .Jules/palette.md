@@ -1,0 +1,3 @@
+## 2026-11-10 - [Accessible Form Landmarks and Focus Visibility]
+**Learning:** Global `outline: none` styles eliminate keyboard navigation cues, which completely breaks accessibility for keyboard-only users. Furthermore, form-based interfaces require semantic heading landmarks and proper `<label>` elements (paired via `for`/`id`) so that screen reader users can navigate and comprehend form fields without altering the visual design when using `.sr-only`.
+**Action:** Replace unconstrained `outline: none` with dedicated `:focus` / `:focus-visible` styles using theme accent tokens (`--blue` for inputs and `--orange` for interactive buttons/links), and ensure all inputs have semantic labels.
